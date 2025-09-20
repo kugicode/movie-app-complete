@@ -1,7 +1,7 @@
-function SearchBar({ movie, setMovie, fetchMovieData }){
+function SearchBar({ className, movie, setMovie, fetchMovieData }){
 return (
     <>
-    <input type="text" value={movie} onChange={(event) => {setMovie(event.target.value)}}
+    <input className="search-bar" type="text" value={movie} onChange={(event) => {setMovie(event.target.value)}}
     onKeyDown={(e) => {
         if(e.key === 'Enter'){
             fetchMovieData();
