@@ -24,11 +24,13 @@ function MovieDetails(){
     }, [id])
 
     return (
-        <>
-        <h2>{details.title}</h2>
+        <div className="movie-details-container">
         <img src={`https://image.tmdb.org/t/p/w500${details.poster_path}`} alt={`${details.title} poster`}></img>
+        <div className="details-content">
+        <h2>{details.title}</h2>
         <h3>{details.overview}</h3>
-</>
+        </div>
+        </div>
     )
 }
 

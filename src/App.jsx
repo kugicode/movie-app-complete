@@ -12,7 +12,6 @@ const [isLoading, setIsLoading] = useState(false);
 const [result, setResult] = useState([]);
 const [errorMessage, setErrorMessage] = useState('');
 
-
 async function fetchMovieData(){
 
 try{

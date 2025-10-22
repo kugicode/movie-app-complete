@@ -15,22 +15,20 @@ return (
 
        
         {isLoading ? (
-          <h3>Loading...</h3>
+          <h3 className="loading">Loading...</h3>
         ) : ( errorMessage.length > 0 ? (<h3 className='error-message'>{errorMessage}</h3>) : 
-        result.map(m => (
+        <div className="movie-results-grid">
+        {result.map(m => ( // <-- FIXED: Added { and } around the map function!
           <Link to={`/movie/${m.id}`} key={m.id}>
             <div className="movie-title-image">
             <h3>{m.title}</h3>
             <MovieCard image={m.poster_path}/>
             </div>
             </Link>
- ))
+        ))} 
+        </div> 
     ) }
   </>
 )
-
-
-
-
 }
 export default HomePage
